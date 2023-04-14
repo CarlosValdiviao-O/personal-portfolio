@@ -1,0 +1,164 @@
+body {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+
+.about {
+  width: 100%;
+}
+
+.about h2 {
+  font-size: 40px;
+}
+
+.background {
+  width: 100%;
+  padding: 3vw 5vw;
+  background-color: aqua;
+  position: relative;
+  overflow: hidden;
+}
+
+.about .content {    
+  display: grid;
+  grid-template-columns: 399px 1fr;
+  z-index: 1;
+  position: relative;
+}
+
+.triangle {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  border-bottom: 250px solid white;
+  border-left: 100vw solid transparent ;
+}
+
+.photo {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+  position: relative;
+  grid-row: 1/3;
+}
+
+.photo .name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.text-container {
+  background-color: white;
+  margin: 40px 0;
+  padding: 16px;
+}
+
+.text-container .text {
+  font-size: 20px;
+  line-height: 1.8rem;
+}
+
+.text-container .icons {
+  display: none;
+}
+
+.phone {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .background {
+    padding: 20px 10px;
+  }
+
+  .triangle {
+    border-bottom: 400px solid white;
+  }
+
+  .about .content {
+    padding: 30px 30px 0;
+    display: block;
+  }
+
+  .photo {
+    width: 350px;
+    height: 350px;
+    top: -5px;
+    left: -10px;
+    float: left;
+  }
+
+  .photo .name {
+    left: 80%;
+    bottom: 80%;
+    width: max-content;
+  }
+
+  .text-container {
+    margin: 60px 0 30px 30px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .photo-background {
+    background-color: aqua;
+    padding: 30px 0px;
+    position: relative;
+  }
+
+  .background {
+    padding: 0;
+    background-color: white;
+  }
+
+  .about .content {
+    padding: 0;
+    margin: auto;
+  }
+
+  .photo {
+    max-width: 400px;
+    max-height: 400px;
+    float: none;
+    margin: auto;
+    top: 0;
+    left: 0;
+  }
+
+  .photo .name {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 64px;
+    text-align: left;
+  }
+
+  .text-container {
+    margin: 0;
+    background-color: transparent;
+  }
+
+  .triangle {
+    border-bottom: 150px solid white;
+  }
+
+  .phone {
+    display: block;
+  }
+}
