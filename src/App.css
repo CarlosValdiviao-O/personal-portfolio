@@ -71,15 +71,103 @@ body {
   line-height: 1.8rem;
 }
 
-.text-container .icons {
+.phone.triangle {
   display: none;
 }
 
-.phone {
-  display: none;
+.projects > h2 {
+  margin-left: 30px;
 }
 
-@media (max-width: 768px) {
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 15px;
+  margin:30px 0 60px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 350px;
+}
+
+.screenshot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  overflow: hidden;
+}
+
+.screenshot img {
+  height: 100%;
+  transition: all ease-in-out .3s;
+}
+
+.screenshot img:hover {
+  transform: scale(1.5);
+}
+
+.project-card .info {
+  height: 150px;
+  padding: 5px;
+}
+
+.project-card .header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.project-card .header img {
+  height: 27px;
+}
+
+.project-card .links {
+  display: flex;
+  gap: 5px;
+}
+
+.contact {
+  background-color: aqua;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  padding: 0 30px;
+}
+
+.left p {
+  margin-top: 10px;
+}
+
+.left .address {
+  margin-top: 20px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  border: 1px solid black;
+}
+
+
+
+@media (max-width: 932px) {
 
   .background {
     padding: 20px 10px;
@@ -87,6 +175,10 @@ body {
 
   .triangle {
     border-bottom: 400px solid white;
+  }
+
+  .about h2 {
+    margin-top: 28px;
   }
 
   .about .content {
@@ -112,9 +204,26 @@ body {
     margin: 60px 0 30px 30px;
   }
 
+  .projects {
+    padding: 0px;
+  }
+
+  .grid {
+    gap: 8px;
+  }
+
+  .project-card {
+    width: 360px;
+    height: 315px;
+  }
+
+  .project-card .info {
+    height: 115px;
+  }
+
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
   .photo-background {
     background-color: aqua;
@@ -139,6 +248,10 @@ body {
     margin: auto;
     top: 0;
     left: 0;
+    width: 94%;
+    overflow: hidden;
+    min-width: 200px;
+    justify-content: center;
   }
 
   .photo .name {
@@ -158,7 +271,51 @@ body {
     border-bottom: 150px solid white;
   }
 
-  .phone {
+  .phone.triangle {
     display: block;
+  }
+
+  .projects > h2 {
+    margin-left: 15px;
+  }
+
+  .grid {
+    gap: 16px;
+  }
+
+  .project-card {
+    width: 94%;
+    height: auto;
+  }
+
+  .screenshot img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-card .info {
+    height: auto;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: normal;
+  }
+
+  .left {
+    padding: 0;
+  }
+
+  .right {
+    margin-top: 20px;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  .screenshot img {
+    width: auto;
+    height: 100%;
   }
 }
