@@ -8,6 +8,16 @@ body {
   border: 0;
 }
 
+h2 {
+  font-family: "Trirong", sans-serif;
+  color: rgb(12, 12, 12);
+}
+
+p {
+  font-family: "Roboto", serif;
+  color: rgb(27, 27, 27);
+}
+
 .about {
   width: 100%;
 }
@@ -19,7 +29,7 @@ body {
 .background {
   width: 100%;
   padding: 3vw 5vw;
-  background-color: aqua;
+  background-color: #56b4ce;
   position: relative;
   overflow: hidden;
 }
@@ -64,6 +74,7 @@ body {
   background-color: white;
   margin: 40px 0;
   padding: 16px;
+  box-shadow: 3px 3px 2px#acacac ;
 }
 
 .text-container .text {
@@ -93,6 +104,8 @@ body {
   flex-direction: column;
   width: 400px;
   height: 350px;
+  box-shadow: 2px 2px 2px 2px#acacac ;
+  margin-top: 10px;
 }
 
 .screenshot {
@@ -120,7 +133,13 @@ body {
 .project-card .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-top: -2px;
+  align-items: center;
+}
+
+.project-card h2 {
+  text-shadow: 1px 1px #acacac;
+  line-height: 1.8rem;
 }
 
 .project-card .header img {
@@ -133,10 +152,14 @@ body {
 }
 
 .contact {
-  background-color: aqua;
+  background-color: #56b4ce;
   padding: 20px;
   display: flex;
   align-items: center;
+}
+
+.contact * {
+  color: rgb(255, 255, 255);
 }
 
 .left {
@@ -145,6 +168,10 @@ body {
 
 .left p {
   margin-top: 10px;
+  text-shadow: 0px 0px white;
+  display: flex;
+  gap: 8px; 
+  height: 20px;
 }
 
 .left .address {
@@ -162,9 +189,21 @@ body {
   border-radius: 50%;
   width: 160px;
   height: 160px;
-  border: 1px solid black;
+  overflow: hidden;
 }
 
+.tech {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.tech img {
+  height: 84%;
+}
 
 
 @media (max-width: 932px) {
@@ -196,7 +235,7 @@ body {
 
   .photo .name {
     left: 80%;
-    bottom: 80%;
+    bottom: 75%;
     width: max-content;
   }
 
@@ -223,10 +262,17 @@ body {
 
 }
 
+@media (max-width: 660px) {
+  .photo .name {
+    left: 60%;
+    width: max-content;
+  }
+}
+
 @media (max-width: 600px) {
 
   .photo-background {
-    background-color: aqua;
+    background-color: #56b4ce;
     padding: 30px 0px;
     position: relative;
   }
